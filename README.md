@@ -18,16 +18,26 @@ pip install pycryptodome
 #Set up
 
 cd this directory
+
 sudo modprobe tun
+
 sudo chmod 666 /dev/net/tun
+
 sudo sysctl -w net.ipv4.ip_forward=1
+
 sudo sysctl -w net.ipv6.conf.all.forwarding=1
+
 sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
 sudo iptables -A FORWARD -i tun1 -o eth0 -j ACCEPT
+
 sudo iptables -A FORWARD -i eth0 -o tun1 -m state --state RELATED,ESTABLISHED -j ACCEPT
 
+
 #Create environment
+
 python3 -m venv ~/oqs-venv
+
 source ~/oqs-venv/bin/activate
 
 #Start scripts
