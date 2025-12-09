@@ -1,5 +1,7 @@
 # STI-postquantum-vpn-wrapper
 VPN wrapper incorporating VPN solutions
+
+
 #Installing dependencies
 sudo apt update
 sudo apt install -y build-essential git cmake python3 python3-venv python3-dev \
@@ -25,6 +27,7 @@ python3 -m venv ~/oqs-venv
 source ~/oqs-venv/bin/activate
 
 #Start scripts
+
 
 sudo ~/oqs-venv/bin/python3 server.py
 sudo ~/oqs-venv/bin/python3 client.py
