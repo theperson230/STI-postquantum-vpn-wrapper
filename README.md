@@ -3,16 +3,20 @@ VPN wrapper incorporating VPN solutions
 
 
 #Installing dependencies
+
 sudo apt update
+
 sudo apt install -y build-essential git cmake python3 python3-venv python3-dev \
     libssl-dev libtool autoconf automake ninja-build pkg-config \
     libcurl4-openssl-dev liboqs-dev net-tools iptables curl
+    
 pip install --upgrade pip
 pip install liboqs
 pip install pycryptodome
 
 
 #Set up
+
 cd this directory
 sudo modprobe tun
 sudo chmod 666 /dev/net/tun
